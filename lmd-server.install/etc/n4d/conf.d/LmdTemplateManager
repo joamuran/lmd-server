@@ -1,0 +1,8 @@
+[SETUP]
+type=python
+path=LmdTemplateManager.py
+class=LmdTemplateManager
+[METHODS]
+getTemplateList=anonymous
+getTemplate=anonymous
+setTemplate=admin,admins,adm
