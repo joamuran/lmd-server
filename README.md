@@ -12,7 +12,7 @@ Manages template files to create LTSP Fat-thin client images.
  
 **N4d Methods**
 
-*getListTemplates():* anonymous
+*getTemplateList():* anonymous
 Reads the file list of templates from /etc/ltsp/templates and returna a JSON List.
 
 *getTemplate(template):* anonymous
