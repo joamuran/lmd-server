@@ -1,0 +1,8 @@
+[SETUP]
+type=python
+path=LmdImageManager.py
+class=LmdImageManager
+[METHODS]
+getImageList=anonymous
+getImage=anonymous
+setImage=admin,admins,adm
