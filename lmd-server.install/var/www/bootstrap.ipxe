@@ -1,0 +1,7 @@
+#!ipxe
+
+:retry_dhcp
+dhcp || goto retry_dhcp
+
+chain http://10.2.1.254/boot.php?mac=${mac}&ip=${ip}&asset=${asset}&netmask=${netmask}&gateway=${gateway}&dns=${dns}&domain=${domain}&filename=${filename}&nextserver=${next-server}&hostname=${hostname}&uuid=${uuid}&userclass=${user-class}&manufacturer=${manufacturer}&product=${product}&serial=${serial}
+

@@ -35,6 +35,7 @@ The image metadata data will be:
 * *name:* Image name
 * *desc:* Image descripion
 * *img:* image .png file
+* *template:* template file which is the image based in
 
 Other fields such as: img file, chroot, date of last modification, SO version, error codes, etc. will be calculated automatically.
 

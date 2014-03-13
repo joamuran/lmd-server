@@ -52,15 +52,16 @@ class LmdImageManager:
 		datafile="";
 		for i in data:
 			datafile=datafile+i+" ";
-		
 				
 		jsondata=json.loads(datafile)
-		print "type is:"+str(type(jsondata))
+		
 		fd=open(self.imagepath+image, 'w')
 		fd.write('{"id":"'+jsondata['id']+'",\n')
 		fd.write('"name":"'+jsondata['name']+'",\n')
+		fd.write('"template":"'+jsondata['template']+'",\n')
 		fd.write('"desc":"'+(jsondata['desc']).encode('utf8')+'",\n')
 		fd.write('"img":"'+jsondata['img']+'"}\n')
 		fd.close()
 	
 	# def setImage(self, image, data)
+	
