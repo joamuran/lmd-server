@@ -7,7 +7,7 @@ Build-Depends: debhelper (>= 7)
 Standards-Version: 3.9.3
 
 Package: lmd-server
-Depends: ${misc:Depends}, dnsmasq, ltsp-server-standalone, ltsp-server
+Depends: ${misc:Depends}, dnsmasq, ltsp-server-standalone, ltsp-server, php5-cli, httpd
 # Depends: ${misc:Depends},${shlibs:Depends}, dnsmasq, n4d-dnsmasq, ltsp-server-standalone, ltsp-server, lliurex-ltsp-client, ldm-lliurex-theme, epoptes, lliurex-mirror-n4d-server, lliurex-maker
 Architecture: all
 Description: LTSP Management for Dummies.
