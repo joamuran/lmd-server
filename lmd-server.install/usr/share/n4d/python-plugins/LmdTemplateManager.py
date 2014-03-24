@@ -44,7 +44,8 @@ class LmdTemplateManager:
 			config.seek(0, os.SEEK_SET)
 			cp = ConfigParser.ConfigParser()
 			cp.readfp(config)
-			return json.dumps(cp.items('default'));
+			return json.dumps(cp._sections)
+			#return json.dumps(cp.items('default'));
 			
 			
 		except Exception as e:
