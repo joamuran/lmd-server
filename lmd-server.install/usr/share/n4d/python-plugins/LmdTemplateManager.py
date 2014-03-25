@@ -2,7 +2,7 @@ import json
 import StringIO
 import os
 import ConfigParser
-
+import shlex
 
 class LmdTemplateManager:
 	
@@ -31,7 +31,6 @@ class LmdTemplateManager:
 	# END def GetListTemplates(self)
 
 
-
 	def getTemplate(self, template):
 		'''
 		Reads the file template from /etc/ltsp/templates
@@ -44,7 +43,13 @@ class LmdTemplateManager:
 			config.seek(0, os.SEEK_SET)
 			cp = ConfigParser.ConfigParser()
 			cp.readfp(config)
-			return json.dumps(cp._sections)
+			aux = cp._sections
+			for x in aux.keys():
+				for y in aux[x]:
+					if aux[x][y][0] == '"' and aux[x][y][-1] == '"':
+						aux[x][y] = aux[x][y][1:-1]
+
+			return json.dumps(aux)
 			#return json.dumps(cp.items('default'));
 			
 			
