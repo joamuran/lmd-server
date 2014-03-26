@@ -50,3 +50,6 @@ Reads the file image from /etc/ltsp/images and returna a JSON string with the im
 	
 * *_setTemplate(template, {config})_:* teachers, admins
 Writes in /etc/ltsp/images the config file "template" with the "config" (JSON/Parameter list) content.
+
+* *_checkTemplateExists (template) _:* anonymous
+Checks if *template* exists in /etc/ltsp/image and returns true (exists) or false (not exists).

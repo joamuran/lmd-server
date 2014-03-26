@@ -38,6 +38,10 @@ class LmdTemplateManager:
 		'''
 		try:
 			config = StringIO.StringIO()
+			config.write('[meta_inf]\n')
+			config.write('name="'+template+'"\n')
+			
+			
 			config.write('[default]\n')
 			config.write(open(str(self.templatepath)+"/"+str(template)).read())
 			config.seek(0, os.SEEK_SET)
@@ -58,7 +62,13 @@ class LmdTemplateManager:
 		# END def getListTemplate(self, template)
 		
 		
+	def checkTemplateExists(self, template):
+		if(os.path.isfile(str(self.templatepath)+"/"+str(template))):
+			return "True"
+		else:
+			return "False"
 		
+	
 	def setTemplate(self, template, config):
 		'''
 		Writes in /etc/ltsp/templates the config file "template" with

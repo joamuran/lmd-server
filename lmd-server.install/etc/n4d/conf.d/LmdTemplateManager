@@ -5,4 +5,5 @@ class=LmdTemplateManager
 [METHODS]
 getTemplateList=anonymous
 getTemplate=anonymous
+checkTemplateExists=anonymous
 setTemplate=admin,admins,adm
